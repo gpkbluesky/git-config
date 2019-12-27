@@ -60,5 +60,5 @@ Thêm những phần sau vào file config:
   ```
   - *Xóa nhánh đã được merge vào nhánh hiện tại*
   ```
-      cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | x$
+      cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 --no-run-if-empty git branch -d
   ```
